@@ -1,0 +1,381 @@
+body {
+  margin: 0;
+  min-width: 250px;
+  position: relative;
+  /*background: url(img/dot36.png) repeat;*/
+  background: url(../img/bg.svg);
+  background-size: 1500px 1900px;
+  font-family: 'Roboto Regular', Arial, sans-serif;
+}
+
+/* Include the padding and border in an element's total width and height */
+* {
+  box-sizing: border-box;
+  transition: all .5s ease;
+webkit-transition: all .5s ease;
+moz-transition: all .5s ease;
+
+}
+
+/* margins and padding from the list */
+ul {
+  margin: 1%;
+  padding: 0;
+  width: 65%;
+  float: left;
+  list-style: none;
+}
+
+/* Style the list items */
+ul li {
+  cursor: pointer;
+  position: relative;
+  border: none;
+  margin-bottom: 1%;
+  padding: 2% 2.5% 2% 10%;
+  background: rgba(147, 152, 105, 0.5);
+  font-size: 1.2em;
+  /*transition: 0.2s;*/
+  transition-timing-function: ease-in-out;
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+  transition-delay: 0.3s;
+  color: #f8dda2; 
+  /* make the list items unselectable */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Set all odd list items to a different color (zebra-stripes) */
+ul li:nth-child(odd) {
+  background: rgba(147, 152, 105, 0.35);
+}
+
+/* Darker background-color on hover */
+ul li:hover {
+  background: rgba(147, 152, 105, 0.4);
+}
+
+/* When clicked on, add a background color and strike out text */
+ul li.checked {
+  background: #d93b09;
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* Add a "checked" mark when clicked on */
+ul li.checked::before {
+  content: '';
+  position: absolute;
+  border-color: #fff;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  top: 13%;
+  left: 3.5%;
+  transform: rotate(35deg);
+  height: 45%;
+  width: 2.5%;
+}
+
+ul li:first-letter {
+    text-transform: uppercase;
+}
+
+/* Style the close button */
+.close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 2% 2.5% 2% 2.5%;
+}
+
+.close:hover {
+  background-color: #f44336;
+  color: white;
+}
+
+/* Style the header */
+.header {
+  /*background-color: #6a552d;*/
+  background-color: #95513f;
+  width: 100%;
+  padding: 0.6% 0;
+  color: white;
+  text-align: center;
+}
+
+h2 {
+  margin: 2.5%;
+  font-size: 1.1em;
+  letter-spacing: 0.1em;
+  font-weight: normal;
+}
+
+/* Clear floats after the header */
+.header:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the input */
+input {
+  border: 0;
+  width: 67%;
+  /*padding: 10px;*/
+  padding: 1.7%;
+  padding-left: 3%;
+  float: left;
+  font-size: 1.1em;
+  color: white;
+  background: #381d07;
+  -webkit-box-shadow: inset 0px 10px 36px 0px rgba(18, 18, 18, 0.60);
+  -moz-box-shadow:    inset 0px 10px 36px 0px rgba(18, 18, 18, 0.60);
+  box-shadow:         inset 0px 10px 36px 0px rgba(18, 18, 18, 0.60);
+}
+
+input:focus { 
+    outline: none !important;
+    border: 0;
+    box-shadow: 0;
+}
+
+.addBtn {
+  padding: 10px;
+  width: 33%;
+  background: #f3f8e0;
+  /*color: #fffab9;  939669 */
+  color: #aabdbd;
+  float: left;
+  font-weight: 600;
+  text-align: center;
+  font-size: 1em;
+  padding: 2%;
+  cursor: pointer;
+  transition: 0.3s;
+  /*text-shadow*/
+  color: transparent;
+  text-shadow: 0px 1px rgba(90,90,90,0.5);
+}
+
+.addBtn:hover {
+  background-color: #fcffd4;
+  color: #7c7f57;
+}
+
+.aside {
+  width: 27%;
+  float: right;
+}
+
+button {
+  display: block;
+  width: 24.9vw;
+  height: 24.9vw;
+  margin-top: 4%;  
+    background: rgba(39, 71, 58, 0.6);
+    border: 2px solid #39b54a;
+    color: #fff;
+  font-size: 0.9em;
+}
+
+button p {
+  color: #fff;
+  font-size: 0.9em;
+  text-align: center;
+  margin-top: 30%;
+}
+
+.saveBtn {
+  position: relative;
+  background: rgba(0, 0, 0, 0);
+  border: 2px solid #fca57b;
+}
+
+.saveBtn p {
+  margin-top: 33%;
+}
+
+.sendBtn {
+  position: relative;
+}
+
+.sendBtn p {
+ margin-top: 76%; 
+}
+
+.redB {
+  background: rgba(69, 19, 5, 0.6);
+  border: 2px solid #f54109; 
+}
+
+.hline1 {
+  position: absolute;
+  width: 45%;
+  height: 3%;
+  text-align: center;
+  background: #fee340;
+  margin-left: 20%;
+  margin-top: 30%;
+}
+
+.hline2 {
+  position: absolute;
+  width: 30%;
+  height: 2%;
+  text-align: center;
+  background: #fee340;
+  margin-left: 35%;
+  margin-top: 40%;
+}
+
+.hline3 {
+  position: absolute;
+  width: 15%;
+  height: 2px;
+  text-align: center;
+  background: #fee340;
+  margin-left: 50%;
+  margin-top: 50%;
+}
+
+ .total {
+  width: 24.9vw;
+  height: 16vw;
+  position: relative;
+  border: 2px solid #39b54a;
+  margin-top: 12%;
+  font-size: 0.9em;
+ }
+
+ .total p {
+    text-align: center;
+    margin-top: 0.42em;
+    margin-bottom: 0.3em;
+    color: #fff;
+ }
+
+ .total sup {
+  position: absolute;
+  box-sizing: border-box;
+  border: 1px solid yellow;
+  border-radius: 50%;
+  width: 18%;
+  top: 4%;
+  right: 4%;
+  color: yellow;
+ }
+
+ .hr {
+  width: 24vw;
+  background: rgba(39, 71, 58, 0.6);
+  border-top: 2px solid #39b54a;
+  height: 7.2vw;
+  outline: none;
+  overflow: hidden;
+  text-align: center;
+ }
+
+ .hline {
+  width: 45%;
+  height: 3%;
+  text-align: center;
+  background: #fee340;
+  margin-left: 28%;
+  margin-top: 44%;
+ }
+
+ .vline {
+  width: 3%;
+  height: 35%;
+  float: left;
+  text-align: center;
+  background: #fee340;
+  margin-left: 12%;
+  margin-top: 29%;
+  margin-bottom: 10%;
+ }
+
+ .vline:first-child {
+   margin-left: 34%;
+  }
+
+ .vlineS  {
+  width: 3%;
+  height: 20%;
+  float: left;
+  text-align: center;
+  background: #fee340;
+  margin-left: 12%;
+  margin-top: 47%;
+ }
+
+ .rline {
+    position: absolute;
+    width: 20%;
+    height: 3%;
+    margin-top:42%;
+    margin-left: 23%;
+    background: #fee340;
+    -ms-transform: rotate(60deg); /* IE 9 */
+    -webkit-transform: rotate(60deg); /* Safari */
+    transform: rotate(60deg); /* Standard syntax */
+ }
+
+ .rline2 {
+    width: 43%;
+    height: 3%;
+    margin-top:41%;
+    margin-left: 34.5%;
+    background: #fee340;
+    -ms-transform: rotate(120deg); /* IE 9 */
+    -webkit-transform: rotate(120deg); /* Safari */
+    transform: rotate(120deg); /* Standard syntax */
+ }
+
+ .clearChecked p {
+      margin-top: 19%;
+ }
+
+#infoTxt {
+  display: none;
+  position: absolute;
+  top:0px;
+  left:0px;
+  width: 100%;
+  height: 100vh;
+  background: rgba(50, 50, 50, 0.7);
+  z-index: 100;
+}
+
+.popupTxt {
+  display: block;
+  width: 60%;
+  margin-left: 20%;
+  margin-top: 30%;
+  border: 5px solid #fee340;
+  background: #643721;
+  padding: 2% 2.5%;
+}
+
+.popupTxt p {
+  text-align: center;
+  font-size: 1.4em;
+  color: white;
+  line-height: 1.3em;
+  text-shadow: 4px 4px 6px #333;
+}
+
+.cancel {
+  text-align: center;
+  width: 32%;
+  margin-left: 35%;
+  font-size: 1.5em;
+  color: white;
+  text-shadow: 4px 4px 6px #000;
+  margin-bottom: 10%;
+  padding: 3%;
+  border: 2px solid #fff;
+  border-radius: 0.3em;
+}
